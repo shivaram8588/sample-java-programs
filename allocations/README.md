@@ -1,6 +1,6 @@
 Sample to show allocations in a Java Flight Recording
 =====================================================
-check git trigger
+check git1 trigger
 This program checks whether a number is prime.
 
 Run the program and also make a profiling recordings.

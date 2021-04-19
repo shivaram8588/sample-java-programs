@@ -9,7 +9,7 @@
       shell: systemctl stop tomcat
     - name: copying source code
       copy:
-       src: /home/linuxslave/workspace/Check_Deployment1/index.html
+       src: /home/linuxslave/workspace/Check_Deployment2/*.jar
        dest: /usr/share/tomcat/webapps
     #- name: download the war file to tomcat webapps server
      # shell: wget -o /usr/share/tomcat/webapps https://labdemoshiv.jfrog.io/artifactory/example-repo-local/

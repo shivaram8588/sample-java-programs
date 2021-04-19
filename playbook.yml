@@ -1,0 +1,17 @@
+---
+ - name: check ansible playbook
+   hosts: webservers
+   become: yes
+   tasks:
+    - name: start tomcat server
+      shell: systemctl start tomcat
+    - name: stop tomcat server
+      shell: systemctl stop tomcat
+    - name: copying source code
+      copy:
+       src: /home/linuxslave/workspace/Check_Deployment1/index.html
+       dest: /usr/share/tomcat/webapps
+    #- name: download the war file to tomcat webapps server
+     # shell: wget -o /usr/share/tomcat/webapps https://labdemoshiv.jfrog.io/artifactory/example-repo-local/
+    - name: start tomcat server
+      shell: systemctl start tomcat
